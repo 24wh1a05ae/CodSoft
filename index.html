@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+
+    <div class="logo">
+        💼 JobBoard
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Post Job</a>
+        <a href="candidate.html">Dashboard</a>
+
+    </nav>
+
+    <div class="user-section">
+
+        <span id="userName"></span>
+
+        <button id="logoutBtn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Find Your Dream Career 🚀</h1>
+
+    <p>
+        Discover thousands of jobs from top companies and
+        take the next step in your career.
+    </p>
+
+    <div class="search-box">
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search jobs, companies or domains...">
+
+        <button onclick="goToJobs()">
+            Search
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="card">
+        <h2>5000+</h2>
+        <p>Jobs</p>
+    </div>
+
+    <div class="card">
+        <h2>1200+</h2>
+        <p>Internships</p>
+    </div>
+
+    <div class="card">
+        <h2>350+</h2>
+        <p>Courses</p>
+    </div>
+
+    <div class="card">
+        <h2>300+</h2>
+        <p>Companies</p>
+    </div>
+
+</section>
+
+<!-- ================= FEATURED JOBS ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>🔥 Featured Jobs</h2>
+
+        <a href="jobs.html">
+            View All →
+        </a>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="job-card">
+
+            <h3>Frontend Developer</h3>
+
+            <p>Google • Bangalore</p>
+
+            <button onclick="goToJob('Frontend Developer')">
+                Apply Now
+            </button>
+
+        </div>
+
+        <div class="job-card">
+
+            <h3>Java Developer</h3>
+
+            <p>Infosys • Hyderabad</p>
+
+            <button onclick="goToJob('Java Developer')">
+                Apply Now
+            </button>
+
+        </div>
+
+        <div class="job-card">
+
+            <h3>Data Science Intern</h3>
+
+            <p>TCS • Chennai</p>
+
+            <button onclick="goToJob('Data Science')">
+                Apply Now
+            </button>
+
+        </div>
+
+        <div class="job-card">
+
+            <h3>UI / UX Designer</h3>
+
+            <p>Adobe • Remote</p>
+
+            <button onclick="goToJob('UI/UX Designer')">
+                Apply Now
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= DOMAINS ================= -->
+
+<section class="section">
+
+    <h2>💻 Explore Domains</h2>
+
+    <div class="grid">
+
+        <div class="domain"
+             onclick="goToDomain('Web Development')">
+
+            💻
+            <h3>Web Development</h3>
+            <p>Frontend • Backend • Full Stack</p>
+
+        </div>
+
+        <div class="domain"
+             onclick="goToDomain('Java Development')">
+
+            ☕
+            <h3>Java Development</h3>
+            <p>Core Java • Spring Boot</p>
+
+        </div>
+
+        <div class="domain"
+             onclick="goToDomain('Data Science')">
+
+            📊
+            <h3>Data Science</h3>
+            <p>Python • Machine Learning</p>
+
+        </div>
+
+        <div class="domain"
+             onclick="goToDomain('Cyber Security')">
+
+            🔒
+            <h3>Cyber Security</h3>
+            <p>Ethical Hacking • SOC</p>
+
+        </div>
+
+        <div class="domain"
+             onclick="goToDomain('Artificial Intelligence')">
+
+            🤖
+            <h3>Artificial Intelligence</h3>
+            <p>Deep Learning • NLP</p>
+
+        </div>
+
+        <div class="domain"
+             onclick="goToDomain('Cloud Computing')">
+
+            ☁
+            <h3>Cloud Computing</h3>
+            <p>AWS • Azure • GCP</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="section">
+
+    <h2>Why Choose JobBoard?</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🎯 Smart Search</h3>
+            <p>Find jobs instantly using skills, companies or domains.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏢 Top Companies</h3>
+            <p>Explore opportunities from leading companies.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Easy Apply</h3>
+            <p>Apply for your dream job in just a few clicks.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote">
+
+    <h2>
+        "Success doesn't come to you,
+        you go to it."
+    </h2>
+
+    <p>
+        Start your journey today.
+    </p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 JobBoard |
+        Made with ❤️ for Students
+
+    </p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

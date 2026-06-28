@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Opportunities</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Available Opportunities</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Post Job</a>
+        <a href="candidate.html">Dashboard</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <input
+        id="searchInput"
+        type="text"
+        placeholder="Search jobs, companies, domains..."
+        onkeyup="searchJobs()"
+    >
+
+    <h2 id="searchTitle">Available Jobs</h2>
+
+    <div id="jobList"></div>
+
+    <div id="suggestions" style="display:none;">
+
+        <h3>No matching jobs found.</h3>
+
+        <p>Try these available domains:</p>
+
+        <button onclick="searchByDomain('Web Development')">
+            Web Development
+        </button>
+
+        <button onclick="searchByDomain('Backend Development')">
+            Backend Development
+        </button>
+
+        <button onclick="searchByDomain('Java Development')">
+            Java Development
+        </button>
+
+        <button onclick="searchByDomain('Python Development')">
+            Python Development
+        </button>
+
+        <button onclick="searchByDomain('Data Science')">
+            Data Science
+        </button>
+
+        <button onclick="searchByDomain('AI & Machine Learning')">
+            AI & Machine Learning
+        </button>
+
+        <button onclick="searchByDomain('Cyber Security')">
+            Cyber Security
+        </button>
+
+        <button onclick="searchByDomain('Cloud Computing')">
+            Cloud Computing
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script src="app.js"></script>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const search = params.get("search");
+
+if (search) {
+
+    document.getElementById("searchInput").value = search;
+
+    searchJobs();
+
+} else {
+
+    displayJobs();
+
+}
+
+</script>
+
+</body>
+</html>

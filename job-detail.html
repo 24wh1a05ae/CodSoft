@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        💼 JobBoard
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Post Job</a>
+        <a href="candidate.html">Dashboard</a>
+    </nav>
+
+    <div class="user-section">
+        <span id="userName"></span>
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+    </div>
+
+</header>
+
+<div class="job-page">
+
+    <div class="job-box">
+
+        <div id="jobDetail"></div>
+
+    </div>
+
+    <div class="apply-box">
+
+        <h2>Apply for this Job</h2>
+
+        <input
+            id="appName"
+            type="text"
+            placeholder="Your Name">
+
+        <input
+            id="appEmail"
+            type="email"
+            placeholder="Email Address">
+
+        <input
+            id="appResume"
+            type="text"
+            placeholder="Resume Link (Google Drive)">
+
+        <button onclick="submitApplication()">
+            Submit Application
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const id=new URLSearchParams(window.location.search).get("id");
+
+const job=jobs.find(j=>j.id==id);
+
+if(!job){
+
+document.getElementById("jobDetail").innerHTML="<h2>Job not found</h2>";
+
+return;
+
+}
+
+document.getElementById("jobDetail").innerHTML=`
+
+<h1>${job.title}</h1>
+
+<p><strong>Company:</strong> ${job.company}</p>
+
+<p><strong>Location:</strong> ${job.location}</p>
+
+<p><strong>Category:</strong> ${job.category}</p>
+
+<p><strong>Type:</strong> ${job.type}</p>
+
+<h3>Description</h3>
+
+<p>${job.description}</p>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>

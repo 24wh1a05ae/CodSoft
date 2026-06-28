@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Login</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="employer.html">Post Job</a>
+    <a href="candidate.html">Dashboard</a>
+    <a href="login.html">Login</a>
+</nav>
+<div class="login-container">
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <input id="name" placeholder="Enter your name">
+
+        <select id="role">
+            <option value="candidate">Candidate</option>
+            <option value="employer">Employer</option>
+        </select>
+
+        <button onclick="login()">Login</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Employer Dashboard</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="employer.html">Post Job</a>
+        <a href="candidate.html">Dashboard</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <input id="title" placeholder="Job Title">
+
+    <input id="company" placeholder="Company">
+
+    <input id="location" placeholder="Location">
+
+    <input id="category" placeholder="Category (Web Development, AI, Java...)">
+
+    <select id="type">
+        <option>Full-Time</option>
+        <option>Part-Time</option>
+        <option>Internship</option>
+    </select>
+
+    <textarea id="desc" placeholder="Job Description"></textarea>
+
+    <button onclick="addJob()">Post Job</button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
